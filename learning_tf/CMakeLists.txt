@@ -162,4 +162,6 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 add_executable(tf_listener src/tf_listener.cpp)
+add_executable(tf_user_listener src/tf_double_listener.cpp)
 target_link_libraries(tf_listener ${catkin_LIBRARIES})
+target_link_libraries(tf_user_listener ${catkin_LIBRARIES})

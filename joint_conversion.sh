@@ -9,7 +9,7 @@ for action in {1..8};do
 echo act_0$action
 #cd "/media/claudio/INTENSO/isr_social_behaviour/act_"$(printf "%02d" $action)
 	for session in {1..10};do
-		cd "/media/claudio/INTENSO/isr_social_behaviour/act_"$(printf "%02d" $action)"/session_"$(printf "%02d" $session) || (rosnode kill /tf_listener && exit $?)
+		cd "/media/claudio/INTENSO/isr_social_behaviour_dataset/act_"$(printf "%02d" $action)"/session_"$(printf "%02d" $session) || (rosnode kill /tf_listener && exit $?)
 
 		for bagfile in $(ls | grep .bag);do
 			rosrun learning_tf tf_user_listener _user:=1 __name:=tf_tracker_user_1 &
